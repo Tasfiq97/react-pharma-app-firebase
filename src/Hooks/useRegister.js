@@ -11,6 +11,7 @@ const useRegister=()=>{
     const [email,setEmail]=useState("")
     const [password,setPassword]=useState("")
  const [emptyField,setEmptyField]=useState("");
+ const [loading,setLoading]=useState(true)
 
 
     const handleEmail=(e)=>{
@@ -23,8 +24,8 @@ const useRegister=()=>{
     }
 
 
-    const handleRegister=(e)=>{
-        e.preventDefault();
+    const handleRegister=()=>{
+        
         if(email===""){
             setEmptyField("please enter email")
             return
@@ -34,7 +35,6 @@ const useRegister=()=>{
         }
         if(password===""){
             setEmptyField("please enter password");
-
             return
         }
         if(password.length<6  ){
@@ -48,21 +48,15 @@ const useRegister=()=>{
         else{
             setEmptyField("")
         }
-        createUserWithEmailAndPassword(auth,email,password)
-        .then(result=>{
-            
-           setUser(result.user)
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            setEmptyField(errorCode)
-            
-          });
+ setLoading(true)
+      return   createUserWithEmailAndPassword(auth,email,password)
+      .finally(setLoading(false));
+        
         
         
        }
-       const handleLogin=(e)=>{
-        e.preventDefault();
+       const handleLogin=()=>{
+       setLoading(true)
         if(email===""){
             setEmptyField("please enter email")
             return
@@ -75,26 +69,24 @@ const useRegister=()=>{
 
             return
         }
-        signInWithEmailAndPassword(auth, email, password)
-        .then(result=>{
-            console.log(result.user)
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            setEmptyField(errorCode)
-          });
+       return signInWithEmailAndPassword(auth, email, password)
+       .finally(setLoading(false))
+       
        }
        useEffect(()=>{
+           setLoading(true)
         onAuthStateChanged(auth, (user)=>{
             if (user) {
                 setUser(user)
             }
+            setLoading(false)
         })
        },[])
        const signOutEmail=()=>{
         signOut(auth).then(() => {
          setUser()
           })
+          .finally(setLoading(false))
     }
        
     return {
@@ -105,7 +97,8 @@ const useRegister=()=>{
         emptyField,
         handleLogin,
         user,
-        signOutEmail
+        signOutEmail,
+        loading
        
     }
 }

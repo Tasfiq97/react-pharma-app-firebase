@@ -11,11 +11,8 @@ const useFirebase=()=>{
     const [user,setUser]=useState({})
 
 const signInGoogle=()=>{
-    signInWithPopup(auth,googleProvider)
-    .then(result=>{
-        setUser(result.user)
-
-    })
+  return  signInWithPopup(auth,googleProvider);
+    
 }
 
   

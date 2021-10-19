@@ -7,10 +7,31 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import useFirebase from '../../Hooks/useFirebase';
 import useRegister from '../../Hooks/useRegister';
+import {useHistory, useLocation } from 'react-router';
 
 const Login = () => {
+  const history=useHistory()
+  const location=useLocation()
     const {handleEmail,handlePassword,handleLogin,emptyField}=useAuth()
     const { signInGoogle}=useFirebase()
+    const redirect=location.state?.from || "/home"
+
+    const handleRedirect=(e)=>{
+e.preventDefault();
+      handleLogin()
+      .then(result=>{
+            history.push(redirect)
+      })
+      
+     
+    }
+
+    const signInGoogleHandle=()=>{
+      signInGoogle()
+      .then(result=>{
+        history.push(redirect)
+      })
+    }
     return (
         <div>
              <div>
@@ -29,12 +50,12 @@ const Login = () => {
     <Form.Control onBlur={handlePassword} type="password" placeholder="Password" />
   </Form.Group>
  
-  <Button onClick={handleLogin} variant="info" type="submit">
+  <Button onClick={handleRedirect} variant="info" type="submit">
     Log in
   </Button>
   <hr />
-  <Button onClick={signInGoogle} variant="warning"> <FontAwesomeIcon icon={faGoogle} /> sign in with google</Button>
-  <p className="mt-5">New to this website ? <Link to="/register">Sign In</Link></p>
+  <Button onClick={signInGoogleHandle} variant="warning"> <FontAwesomeIcon icon={faGoogle} /> sign in with google</Button>
+  <p className="mt-5">New to this website ? <Link to="/register"> You can Sign In</Link></p>
 </Form>
 </Container>
         </div>

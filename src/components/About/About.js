@@ -14,7 +14,7 @@ const About = () => {
           <img className="img-fluid" src={store} alt="" />
       </div>
     </Col>
-    <Col xs={6} md={6} style={{textAlign:"center", marginTop:"50px"}}>
+    <Col xs={12} md={6} style={{ marginTop:"50px"}}>
     <div>
     <h3 className="text-dark fw-bolder">Welcome To Pharmaco-zone</h3>
       <h5>Our main motives</h5>

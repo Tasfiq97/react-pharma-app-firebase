@@ -1,18 +1,25 @@
 
 import React, { useState } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link,useLocation,useHistory } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import useRegister from '../../Hooks/useRegister';
 
 
 
 const Register = () => {
-   
+   const location=useLocation()
+   const history=useHistory()
   const {handleEmail,handlePassword,handleRegister,emptyField}= useAuth()
 
-
-
+const redirect=location.state?.from || "/home"
+   const handleRedirect=(e)=>{
+     e.preventDefault()
+     handleRegister()
+     .then(result=>{
+          history.push(redirect)
+     })
+   }
  
 
 
@@ -34,7 +41,7 @@ const Register = () => {
     <Form.Control onBlur={handlePassword} type="password" placeholder="Password" required/>
   </Form.Group>
  
-  <Button onClick={handleRegister} variant="info" type="submit">
+  <Button onClick={handleRedirect} variant="info" type="submit">
     Sign up
   </Button>
   <p className="mt-5">Already have an account ? <Link to="/login">Log in</Link></p>
