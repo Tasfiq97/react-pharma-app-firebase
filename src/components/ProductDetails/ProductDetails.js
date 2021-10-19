@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
 import useProduct from '../../Hooks/useProduct';
 
 const ProductDetails = () => {
@@ -16,12 +17,14 @@ const ProductDetails = () => {
         <div>
            <Container fluid className="mt-5 mb-5">
   <Row xs={1} md={2} >
-    <Col className="d-flex justify-content-center align-items-center p-5">
+    <Col className="d-flex justify-content-center align-items-center p-3">
      <div>
      <h1>{name}</h1>
       <p className="mt-5">{description}</p>
       <h3> price:  $ {price}</h3>
-      <Button variant="info">Add To cart</Button>
+      <Link to="/delivery">
+      <Button variant="info">Order This product</Button>
+      </Link>
      </div>
     </Col>
 

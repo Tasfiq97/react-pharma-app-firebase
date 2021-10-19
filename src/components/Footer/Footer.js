@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <div style={{marginTop:"70px"}}>
             <Container fluid style={{backgroundColor:"#c5e7ee"}}>
-  <Row xs={1} md={1} lg={3} className="pr-3 pl-3">
+  <Row xs={1} md={1} lg={3} className=" ">
     <Col>
     <h3 className="fs-3 fw-bolder mt-5">About Us</h3>
     <p>Pellentesque posuere orci lobortis scelerisque blandit. Donec id tellus lacinia an, tincidunt risus ac, consequat velit. Quisquemos sodales suscipit tortor ditaemcos condimentum lacus meleifend.</p>
@@ -53,7 +53,7 @@ const Footer = () => {
     </Col>
   </Row>
    <div className="p-2 mt-4">
-       <h5 className="fw-bold">&copy; All rights reserved 2021</h5>
+       <p className="fw-bold text-center">&copy; All rights reserved 2021</p>
    </div>
 </Container>
         </div>

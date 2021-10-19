@@ -4,7 +4,7 @@ import store from "../../Images/7815.jpg"
 
 const About = () => {
     return (
-        <div className="mt-5 ">
+        <div className="mt-5 " id="about">
             <h1 className="fw-bolder fs-1 mb-5">About Us</h1>
             <Container fluid className="mt-5">
  
@@ -18,7 +18,7 @@ const About = () => {
     <div>
     <h3 className="text-dark fw-bolder">Welcome To Pharmaco-zone</h3>
       <h5>Our main motives</h5>
-      <div className="p-3">
+      <div className="p-1">
        <h3 style={{color:"gray",fontWeight:"bold"}}>Team of Professionals</h3>
        <p style={{color:"gray"}}>Allergy shots and immunotherapy body type cornea epidermis Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
       </div>

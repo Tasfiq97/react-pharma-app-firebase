@@ -10,7 +10,7 @@ import Products from '../Products/Products';
 
 const Home = () => {
     return (
-        <div>
+        <div id="home" style={{overflowX:"hidden"}}>
           
           <Banner></Banner>
           <About></About>

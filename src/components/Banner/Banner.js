@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
+import { HashLink } from 'react-router-hash-link';
 import doctor from "../../Images/banner-removebg-preview.png"
 const Banner = () => {
     return (
@@ -16,7 +17,9 @@ const Banner = () => {
          <h1 className="fw-bold"> Doctor's Prescribe</h1>
          <h5>You can get Our Medicines upto 15% off</h5>
          <p>please visit us For more details</p>
-         <Button variant="info">Show More</Button>
+         <HashLink to="/home#products">
+         <Button variant="info">Show products</Button>
+         </HashLink>
     </div>
     </Col>
   </Row>

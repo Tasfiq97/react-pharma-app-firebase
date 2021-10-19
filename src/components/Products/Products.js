@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { Col, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import useProduct from '../../Hooks/useProduct';
 import SingleProduct from '../SingleProduct/SingleProduct';
 
 const Products = () => {
     const [products]=useProduct([])
-    console.log(products)
+   
     return (
-        <div className="mt-5">
-            <h1 className="fs-1 fw-bolderf">Our Products</h1>
-            <Row xs={1} md={3} className="g-4 mt-5">
+        <div className="mt-5" id="products">
+            <h1 className="fs-1 fw-bolder text-center">Our Products</h1>
+            <Container>
+            <Row xs={1} md={3} className="g-2 mt-5">
    
         {
             products.map(product=><SingleProduct
@@ -21,6 +22,7 @@ const Products = () => {
    
   
 </Row>
+</Container>
         </div>
     );
 };

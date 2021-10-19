@@ -6,8 +6,8 @@ import doctor3 from "../../Images/team (4).jpg"
 const Doctors = () => {
     return (
         <div style={{marginTop:"100px"}}>
-            <h1 className="fs-1 fw-bolder">Our Doctors</h1>
-            <Row xs={1} md={3} className="g-3 p-4">
+            <h1 className="fs-1 fw-bolder text-center">Our Doctors</h1>
+            <Row xs={1} md={3} className="g-3 p-2 mt-5 mb-5">
  
     <Col>
       <Card>
