@@ -3,7 +3,7 @@ import { Button, Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 const Menubar = () => {
     return (
         <div>
-           <Navbar sticky="top" collapseOnSelect expand="lg" bg="info" variant="dark">
+           <Navbar  collapseOnSelect expand="lg" bg="info" variant="dark" sticky="top">
   <Container fluid>
   <Navbar.Brand style={{fontFamily:'Roboto, sans-serif'}} className="text-dark fs-2 fw-bold" href="#home">Pharmaco-Zone</Navbar.Brand>
   <Navbar.Toggle className="text-dark fw-bold"  aria-controls="responsive-navbar-nav" />

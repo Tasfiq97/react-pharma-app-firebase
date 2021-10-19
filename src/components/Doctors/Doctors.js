@@ -14,7 +14,7 @@ const Doctors = () => {
         <Card.Img variant="top" src={doctor1} />
         <Card.Body>
           <Card.Title>Dr.Hary Bastick</Card.Title>
-          <Card.Text>
+          <Card.Text style={{color:"gray"}}>
            Family Physicist
           </Card.Text>
         </Card.Body>
@@ -25,7 +25,7 @@ const Doctors = () => {
         <Card.Img variant="top" src={doctor2} />
         <Card.Body>
           <Card.Title>Dr. Laro Miran</Card.Title>
-          <Card.Text>
+          <Card.Text style={{color:"gray"}}>
           Family Physicist
           </Card.Text>
         </Card.Body>
@@ -36,7 +36,7 @@ const Doctors = () => {
         <Card.Img variant="top" src={doctor3} />
         <Card.Body>
           <Card.Title>Dr. Saga Norén</Card.Title>
-          <Card.Text>
+          <Card.Text style={{color:"gray"}}>
             family physicist
           </Card.Text>
         </Card.Body>

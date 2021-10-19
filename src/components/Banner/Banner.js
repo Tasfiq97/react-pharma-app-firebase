@@ -7,7 +7,7 @@ const Banner = () => {
             <Container fluid style={{backgroundColor:"#c5e7ee"}}>
   <Row>
     <Col xs={12} md={5}>
-    <div>
+    <div className="p-5">
         <img  className="img-fluid" src={doctor} alt="" />
     </div>
     </Col>

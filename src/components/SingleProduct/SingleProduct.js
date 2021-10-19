@@ -3,9 +3,10 @@ import React from 'react';
 import { Button, Card, Col, Container } from 'react-bootstrap';
 import Rating from 'react-rating';
 import {  faStar } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom';
 
 const SingleProduct = ({product}) => {
-    const {name,img,description}=product
+    const {name,img,description,id}=product ||{}
     return (
         <div>
              <Col>
@@ -29,7 +30,9 @@ const SingleProduct = ({product}) => {
   fullSymbol={<FontAwesomeIcon icon={faStar} />}
 />
           </Card.Text>
-          <Button variant="info">View Details</Button>
+         <Link  to={`/product/${id}`}>
+         <Button variant="info">View Details</Button>
+         </Link>
         </Card.Body>
       </Card>
       </Container>

@@ -8,7 +8,7 @@ const Products = () => {
     console.log(products)
     return (
         <div className="mt-5">
-            <h1 className="fs-1 fw-bolder">Our Products</h1>
+            <h1 className="fs-1 fw-bolderf">Our Products</h1>
             <Row xs={1} md={3} className="g-4 mt-5">
    
         {
