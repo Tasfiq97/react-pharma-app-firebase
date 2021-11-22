@@ -12,7 +12,7 @@ This project was bootstrapped with [pharmacore-app](https://heath-care-pharmaco-
 
 ## we deliver your product in an hour ..thats our promise to you
  ## you can find every medicine not so costly 
- 
+
 
 
 

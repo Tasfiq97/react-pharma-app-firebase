@@ -15,7 +15,7 @@ const Banner = () => {
     <Col xs={12} md={5} className="d-flex justify-content-center align-items-center">
     <div className="mt-3 mb-3">
          <h1 className="fw-bold"> Doctor's Prescribe</h1>
-         <h5>You can get Our Medicines upto 15% off</h5>
+         <h5>You can get Our Medicines upto 15% off only</h5>
          <p>please visit us For more details</p>
          <HashLink to="/home#products">
          <Button variant="info">Show products</Button>
