@@ -11,30 +11,14 @@ const Footer = () => {
     <Col>
     <h3 className="fs-3 fw-bolder mt-5">About Us</h3>
     <p>Pellentesque posuere orci lobortis scelerisque blandit. Donec id tellus lacinia an, tincidunt risus ac, consequat velit. Quisquemos sodales suscipit tortor ditaemcos condimentum lacus meleifend.</p>
-    <h2>Pharmaco-Zone</h2>
     </Col>
     <Col>
-    <h2 className="fs-3 fw-bolder mt-5">Openning Hours</h2>
     <div className="featured-content">                                         
-                <span>Friday</span>  <span>-------</span> <span>9:00 - 22:00</span>
-              </div>
-              <div className="featured-content">                                         
-                <span>Saturday</span>  <span>-------</span> <span>9:00 - 22:00</span>
-              </div>
-              <div className="featured-content">                                         
-                <span>Sunday</span>  <span>-------</span> <span>9:00 - 22:00</span>
-              </div>
-              <div className="featured-content">                                         
-                <span>Monday</span>  <span>-------</span> <span>9:00 - 22:00</span>
-              </div>
-              <div className="featured-content">                                         
-                <span>Tuesday</span>  <span>-------</span> <span>9:00 - 22:00</span>
-              </div>
-              <div className="featured-content">                                         
-                <span>Wednesday</span>  <span>-------</span> <span>9:00 - 22:00</span>
-              </div>
-              <div className="featured-content">                                         
-                <span>Thursday</span>  <span>-------</span> <span>9:00 - 22:00</span>
+    <h1  className='mt-5'>Pages</h1>
+                    <li>blog</li>
+                    <li>home</li>
+                    <li>Sample</li>
+                    <li>shortcodes</li>
               </div>
     </Col>
     <Col>
@@ -53,7 +37,7 @@ const Footer = () => {
     </Col>
   </Row>
    <div className="p-2 mt-4">
-       <p className="fw-bold text-center">&copy; All rights reserved 2021</p>
+       <p className="fw-bold text-center">&copy; All rights reserved 2022</p>
    </div>
 </Container>
         </div>

@@ -6,15 +6,15 @@ const OrderDone = () => {
     return (
         <div>
             <Container className="mt-5">
-                <h1>Thank You For Your Order!!!</h1>
+                <h1>Thank You For Your Enrollment!!!</h1>
   <Row>
     <Col xs={12} md={6}>
     <Card className="mt-5">
   <Card.Body>
-    <Card.Title>Your Order done</Card.Title>
+    <Card.Title>Your enroll done</Card.Title>
  
     <Card.Text>
-     please wait for the items that you ordered.we will inform you when product arrives
+     please wait for the next instruction.we will inform you.
     </Card.Text>
     <Link to="/home">
      <Button variant="dark">Go back</Button>
@@ -22,11 +22,7 @@ const OrderDone = () => {
   </Card.Body>
 </Card>
     </Col>
-    <Col xs={12} md={6}>
-      <div>
-        <img className="img-fluid" src={orderDone} alt="" />
-      </div>
-    </Col>
+    
     </Row>
     </Container>
         </div>

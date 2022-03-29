@@ -10,9 +10,9 @@ const Menubar = () => {
  
     return (
         <div>
-           <Navbar  collapseOnSelect expand="lg" bg="info" variant="dark" sticky="top">
+           <Navbar  collapseOnSelect expand="lg" bg="none" variant="dark" sticky="top">
   <Container fluid>
-  <Navbar.Brand as={HashLink} style={{fontFamily:'Roboto, sans-serif'}} className="text-dark fs-2 fw-bold" to="/home#home">Pharmaco-Zone</Navbar.Brand>
+  <Navbar.Brand as={HashLink} style={{fontFamily:'Roboto, sans-serif'}} className="text-dark fs-2 fw-bold" to="/home#home">MasterEd</Navbar.Brand>
   <Navbar.Toggle className="text-dark fw-bold"  aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse  id="responsive-navbar-nav">
     <Nav className="ms-auto">

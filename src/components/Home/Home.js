@@ -2,9 +2,8 @@ import React from 'react';
 import About from '../About/About';
 import Banner from '../Banner/Banner';
 
-import Doctors from '../Doctors/Doctors';
-import Footer from '../Footer/Footer';
-import Menubar from '../Menubar/Menubar';
+import Course from '../CourseCreate/Course';
+
 import Products from '../Products/Products';
 
 
@@ -15,7 +14,7 @@ const Home = () => {
           <Banner></Banner>
           <About></About>
          <Products></Products>
-         <Doctors></Doctors>
+         <Course></Course>
          
         
         </div>

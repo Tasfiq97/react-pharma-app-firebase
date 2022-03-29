@@ -23,7 +23,7 @@ const ProductDetails = () => {
       <p className="mt-5">{description}</p>
       <h3> price:  $ {price}</h3>
       <Link to="/delivery">
-      <Button variant="info">Order This product</Button>
+      <Button variant="info">Enroll this course</Button>
       </Link>
      </div>
     </Col>

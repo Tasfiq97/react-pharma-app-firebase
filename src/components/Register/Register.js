@@ -14,11 +14,13 @@ const Register = () => {
 
 const redirect=location.state?.from || "/home"
    const handleRedirect=(e)=>{
-     e.preventDefault()
+    e.preventDefault()
      handleRegister()
      .then(result=>{
           history.push(redirect)
+        
      })
+    
    }
  
 
